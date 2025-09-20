@@ -1,0 +1,14 @@
+digraph main {
+   b0
+   left
+   right
+   end
+   b0 -> left
+   b0 -> right
+   left -> end
+   right -> end
+}
+{'b0': 0, 'left': 1, 'right': 1, 'end': 2}
+['b0', 'right', 'left', 'end']
+[]
+True

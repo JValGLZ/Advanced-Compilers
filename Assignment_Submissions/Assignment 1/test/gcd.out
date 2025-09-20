@@ -1,0 +1,26 @@
+digraph main {
+   b0
+   cmp.val
+   if.1
+   else.1
+   loop.bound
+   update.val
+   if.2
+   else.2
+   program.end
+   b0 -> cmp.val
+   cmp.val -> if.1
+   cmp.val -> else.1
+   if.1 -> loop.bound
+   else.1 -> loop.bound
+   loop.bound -> program.end
+   loop.bound -> update.val
+   update.val -> if.2
+   update.val -> else.2
+   if.2 -> cmp.val
+   else.2 -> cmp.val
+}
+{'b0': 0, 'cmp.val': 1, 'if.1': 2, 'else.1': 2, 'loop.bound': 3, 'program.end': 4, 'update.val': 4, 'if.2': 5, 'else.2': 5}
+['b0', 'cmp.val', 'else.1', 'if.1', 'loop.bound', 'update.val', 'else.2', 'if.2', 'program.end']
+[('if.2', 'cmp.val'), ('else.2', 'cmp.val')]
+True

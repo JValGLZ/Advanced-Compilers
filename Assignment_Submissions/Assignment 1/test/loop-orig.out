@@ -1,0 +1,14 @@
+digraph main {
+   entry
+   loop
+   body
+   exit
+   entry -> loop
+   loop -> body
+   loop -> exit
+   body -> loop
+}
+{'entry': 0, 'loop': 1, 'body': 2, 'exit': 2}
+['entry', 'loop', 'exit', 'body']
+[('body', 'loop')]
+True
