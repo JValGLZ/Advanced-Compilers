@@ -1,0 +1,33 @@
+=== Available Expressions ===
+b1:
+  in:  ∅
+  out: ∅
+loop:
+  in:  ∅
+  out: (lt exp one)
+body:
+  in:  (lt exp one)
+  out: (mul out base), (sub exp one)
+ret:
+  in:  (lt exp one)
+  out: (lt exp one)
+b1:
+  in:  ∅
+  out: (add half smaller), (add maxint one), (sub half one)
+
+=== Reaching Definitions ===
+b1:
+  in:  ∅
+  out: one@1, out@0
+loop:
+  in:  end@1000, exp@2001, one@1, out@0, out@2000
+  out: end@1000, exp@2001, one@1, out@0, out@2000
+body:
+  in:  end@1000, exp@2001, one@1, out@0, out@2000
+  out: end@1000, exp@2001, one@1, out@2000
+ret:
+  in:  end@1000, exp@2001, one@1, out@0, out@2000
+  out: end@1000, exp@2001, one@1, out@0, out@2000
+b1:
+  in:  ∅
+  out: half@3, maxint@6, one@0, overflow@8, sixtytwo@2, smaller@5, two@1

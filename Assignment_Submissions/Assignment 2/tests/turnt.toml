@@ -1,0 +1,7 @@
+command = """
+echo "=== Available Expressions ==="
+bril2json < {filename} | python3 ../df.py ae
+echo ""
+echo "=== Reaching Definitions ==="
+bril2json < {filename} | python3 ../df.py rd
+"""

@@ -1,0 +1,27 @@
+=== Available Expressions ===
+entry:
+  in:  ∅
+  out: ∅
+loop:
+  in:  ∅
+  out: (lt i max)
+body:
+  in:  (lt i max)
+  out: (add i i)
+exit:
+  in:  (lt i max)
+  out: (lt i max)
+
+=== Reaching Definitions ===
+entry:
+  in:  ∅
+  out: i@0
+loop:
+  in:  cond@1001, i@0, i@2000, max@1000
+  out: cond@1001, i@0, i@2000, max@1000
+body:
+  in:  cond@1001, i@0, i@2000, max@1000
+  out: cond@1001, i@2000, max@1000
+exit:
+  in:  cond@1001, i@0, i@2000, max@1000
+  out: cond@1001, i@0, i@2000, max@1000
